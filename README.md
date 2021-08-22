@@ -69,7 +69,7 @@ Also, note that the above override file, will configure a default user/passwd of
 
 You can now install Jenkins by running the *helm install* command:
 ```
-helm install jenkins -n jenkins -f ./jenkins-values.yaml jenkinsci/jenkins
+helm install jenkins -n jenkins -f ./helm/jenkins-values.yaml jenkinsci/jenkins
 ```
 
 NB. The override values provided in file __jenkins-values.yaml__, assume that an Ingress Controller has been installed within the cluster. 
@@ -79,4 +79,8 @@ As a suggestion, the Nginx Ingress Controller could be leveraged here using the 
 ```
 kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/main/deploy/static/provider/kind/deploy.yaml
 ```
+
+# References
+
+[Installing Jenkins with Helm 3](https://www.jenkins.io/doc/book/installing/kubernetes/)
 
